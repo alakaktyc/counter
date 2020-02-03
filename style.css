@@ -1,0 +1,13 @@
+
+main{
+    font-size: 20px;
+}
+.elements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: red;
+    font-weight: bold;
+}
