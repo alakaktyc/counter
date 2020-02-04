@@ -10,15 +10,15 @@ function showVisible() {
     const el = document.querySelectorAll('.count');
     for (let i = 0; i < el.length; i++){
         const final = parseInt(el[i].textContent, 10);
-        const duration = 1000;
+        const duration = 2000;
 
         const step = ts => {
             if (!start) {
                 start = ts
             }
-            let progress = (ts - start) / duration;
-
-            el[i].textContent = Math.floor(progress * final);
+            let progress = Math.ceil(ts - start) / duration;
+            console.log(progress);
+            el[i].textContent = Math.floor(progress * final) + " +";
             if (progress < 1) {
                 requestAnimationFrame(step)
             }
